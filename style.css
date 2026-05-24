@@ -285,3 +285,25 @@ body {
     background-color: #17a2b8; /* สีฟ้าสำหรับเว็บไซต์ */
 }
 .web-btn:hover { background-color: #138496; }
+/* 1. แก้ปัญหาขอบขาวด้านขวา (ล็อกไม่ให้เว็บกว้างเกินหน้าจอ) */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+/* 2. จัดระเบียบกล่องเมนูนำทาง */
+.official-nav {
+    display: flex;
+    flex-wrap: wrap; /* ถ้ายาวเกินหน้าจอ ให้อนุญาตให้ปัดลงบรรทัดใหม่ได้ */
+    justify-content: center;
+    gap: 15px; /* เพิ่มระยะห่างระหว่างเมนูไม่ให้เบียดกัน */
+    padding: 10px;
+}
+
+/* 3. จัดระเบียบตัวหนังสือในเมนู */
+.official-nav a {
+    white-space: nowrap; /* คำสั่งสำคัญ: ห้ามตัวหนังสือฉีกขาดลงมาซ้อนกัน */
+    padding: 5px 10px;
+    text-align: center;
+}
