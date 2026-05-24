@@ -232,3 +232,56 @@ body {
     border-radius: 50%; /* คำสั่งนี้คือพระเอกที่ทำให้รูปกลมครับ */
     margin-bottom: 10px;
 }
+/* ตกแต่งกล่องบทเรียน */
+.lesson-card {
+    background-color: #f8f9fa;
+    border-left: 5px solid #003399;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.lesson-card h4 {
+    color: #003399;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.lesson-card p {
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* จัดกลุ่มปุ่มในกล่องบทเรียน */
+.lesson-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* ให้ปุ่มปัดลงบรรทัดใหม่ถ้ายาวเกินไปในมือถือ */
+}
+
+/* ตกแต่งปุ่มดาวน์โหลด/ดูสื่อ */
+.lesson-btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.pdf-btn {
+    background-color: #dc3545; /* สีแดงสำหรับ PDF */
+}
+.pdf-btn:hover { background-color: #c82333; }
+
+.video-btn {
+    background-color: #ff0000; /* สีแดง YouTube */
+}
+.video-btn:hover { background-color: #cc0000; }
+
+.web-btn {
+    background-color: #17a2b8; /* สีฟ้าสำหรับเว็บไซต์ */
+}
+.web-btn:hover { background-color: #138496; }
