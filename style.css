@@ -1,0 +1,234 @@
+/* บังคับใช้ฟอนต์ Sarabun สำหรับทุกส่วนของเว็บไซต์ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* ตกแต่งส่วนหัวให้ดูเป็นทางการ (น้ำเงิน-ทอง) */
+.official-header {
+    background-color: #003399;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 5px solid #ffcc00;
+}
+
+.emblem-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px dashed #ffcc00;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.official-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.official-header h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #f8f9fa;
+}
+
+/* แถบเมนูที่เป็นระเบียบ */
+.official-nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.official-nav a {
+    color: #003399;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.official-nav a:hover {
+    background-color: #003399;
+    color: #ffffff;
+}
+
+/* จัดระเบียบเนื้อหาตรงกลาง */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* กล่องเนื้อหาหลักแบบมีกรอบชัดเจน */
+.content-box {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-top: 4px solid #003399;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.section-title {
+    color: #003399;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px;
+}
+
+.content-box p {
+    font-size: 1.1rem;
+}
+
+/* กล่องข้อมูลย่อย (แบ่ง 2 ฝั่ง) */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    width: 48%;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.info-card h4 {
+    color: #b30000; /* ใช้สีแดงเข้มสำหรับหัวข้อเน้นย้ำ */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #555555;
+}/* จัดข้อความให้อยู่กึ่งกลาง */
+.text-center {
+    text-align: center;
+}
+
+/* ตกแต่งปุ่มกดส่งงาน */
+.upload-btn {
+    display: inline-block;
+    background-color: #28a745; /* สีเขียว */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.upload-btn:hover {
+    background-color: #218838; /* สีเขียวเข้มขึ้นเมื่อเอาเมาส์ชี้ */
+    transform: translateY(-2px); /* ปุ่มขยับขึ้นเล็กน้อยเวลากด */
+}/* จัดกลุ่มปุ่มเลือกห้องให้อยู่ตรงกลาง */
+.room-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* ระยะห่างระหว่างปุ่ม */
+    flex-wrap: wrap; /* ถ้าจอมือถือเล็กให้ปุ่มปัดลงบรรทัดใหม่ */
+}
+
+/* ตกแต่งปุ่มเลือกห้อง */
+.room-btn {
+    background-color: #ffffff;
+    color: #003399;
+    border: 2px solid #003399;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* เปลี่ยนสีปุ่มเมื่อเอาเมาส์ชี้ หรือตอนกด */
+.room-btn:hover {
+    background-color: #003399;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}/* ตกแต่งกล่องแจ้งเตือนก่อนสอบ */
+.alert-box {
+    background-color: #fff3cd; /* สีเหลืองอ่อน */
+    border-left: 5px solid #ffcc00; /* ขอบซ้ายสีเหลืองเข้ม */
+    padding: 15px 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+    border-radius: 4px;
+    color: #856404;
+}
+
+.alert-box h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.alert-box p {
+    font-size: 1rem;
+    line-height: 1.8;
+}/* บังคับไม่ให้เนื้อหาภายในกล่องล้นออกด้านข้าง */
+.content-box {
+    overflow-x: hidden;
+}
+
+/* จัดการ iframe ของแบบทดสอบให้พอดีกับหน้าจอมือถือ */
+.responsive-iframe {
+    max-width: 100%;
+    border: none;
+    border-radius: 8px; /* เพิ่มขอบมนให้ดูทันสมัยขึ้น */
+}
+
+/* ปรับระยะห่างสำหรับหน้าจอมือถือ (หน้าจอเล็กกว่า 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+    
+    .content-box {
+        padding: 15px;
+    }
+    
+    .alert-box {
+        padding: 10px 15px;
+    }
+}.school-logo {
+    width: 90px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+.school-logo {
+    width: 90px;
+    height: 90px; /* บังคับความสูงให้เท่ากับความกว้าง */
+    object-fit: cover; /* จัดระเบียบภาพไม่ให้ยืดหรือบิดเบี้ยว */
+    border-radius: 50%; /* คำสั่งนี้คือพระเอกที่ทำให้รูปกลมครับ */
+    margin-bottom: 10px;
+}

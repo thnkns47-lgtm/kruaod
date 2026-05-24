@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประกาศผลคะแนน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="official-header">
+        <img src="logo.png" alt="ตราประจำสถาบัน" class="school-logo">
+        <h1>ระบบจัดการการเรียนการสอน (LMS)</h1>
+        <h2>รายวิชาเทคโนโลยี (วิทยาการคำนวณ)</h2>
+    </header>
+
+    <nav class="official-nav">
+        <a href="index.html">หน้าหลัก</a>
+        <a href="#">เอกสารประกอบการสอน</a>
+        <a href="assignment.html">ระบบส่งภาระงาน</a>
+        <a href="#">แบบทดสอบออนไลน์</a>
+        <a href="results.html">ประกาศผลคะแนน</a>
+    </nav>
+
+    <main class="container">
+        <div class="content-box text-center">
+            <h3 class="section-title">ประกาศผลคะแนนรวม</h3>
+            <p>กรุณาคลิกเลือกห้องเรียนของคุณ เพื่อตรวจสอบคะแนน</p>
+            
+            <!-- ปุ่มสำหรับเลือกห้องเรียน -->
+            <div class="room-buttons">
+                <!-- นำลิงก์ที่อยู่ใน src="..." ของ Google Sheets มาใส่ในเครื่องหมายคำพูดเดี่ยว (' ') -->
+                <button class="room-btn" onclick="showRoom('https://docs.google.com/spreadsheets/d/e/2PACX-1vQSAZS9I1RsKJRNd3ymQLEpnLgLEzDnIk7s9Yv_Sjy_gsKKf8_y2kLjWBmpLMphv5eNE7aMaPSYVS6H/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false')">ห้อง ม.6/1</button>
+                <button class="room-btn" onclick="showRoom('https://docs.google.com/spreadsheets/d/e/2PACX-1vQSAZS9I1RsKJRNd3ymQLEpnLgLEzDnIk7s9Yv_Sjy_gsKKf8_y2kLjWBmpLMphv5eNE7aMaPSYVS6H/pubhtml?gid=2099681162&amp;single=true&amp;widget=true&amp;headers=false')">ห้อง ม.6/2</button>
+            </div>
+            
+            <br>
+            
+            <!-- ข้อความแนะนำก่อนกดเลือกห้อง -->
+            <p id="selectPrompt" style="color: #666; font-style: italic;">ตารางคะแนนจะแสดงขึ้นเมื่อเลือกห้องเรียน</p>
+
+            <!-- พื้นที่สำหรับแสดงตาราง (ซ่อนไว้ก่อน) -->
+            <div class="sheet-container">
+                <iframe id="sheetFrame" src="" width="100%" height="500" style="display: none; border: 1px solid #ccc; border-radius: 8px;"></iframe>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- สคริปต์สำหรับสลับตาราง -->
+    <script>
+        function showRoom(sheetUrl) {
+            // ดึงตัว iframe และข้อความแนะนำมาทำงาน
+            var iframe = document.getElementById("sheetFrame");
+            var prompt = document.getElementById("selectPrompt");
+            
+            // เปลี่ยนลิงก์ตารางให้ตรงกับห้องที่กด
+            iframe.src = sheetUrl;
+            
+            // โชว์ตาราง และซ่อนข้อความแนะนำ
+            iframe.style.display = "block";
+            prompt.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
